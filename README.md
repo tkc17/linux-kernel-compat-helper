@@ -1,6 +1,10 @@
 # linux-kernel-compat-helper
 Linux kernel compatibility helper to add version guards for an out-of-tree modules or to get the tag information for a particular commit.
 
+## Build and Coverage status
+
+[![Build Status](https://travis-ci.com/chaitu-tk/linux-kernel-compat-helper.svg?branch=main)](https://travis-ci.com/chaitu-tk/linux-kernel-compat-helper)  [![codecov](https://codecov.io/gh/chaitu-tk/linux-kernel-compat-helper/branch/main/graph/badge.svg?token=T66GVAIN07)](https://codecov.io/gh/chaitu-tk/linux-kernel-compat-helper)
+
 # Introduction
 For maintaining an out-of-tree module it is important to support multiple kernel version compatibility
 using Linux kernel version guards, we can get the exact commit for the fix by using `git blame` or `git bisect` etc, but the main problem is to figure out the version number which the fix

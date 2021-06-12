@@ -1,5 +1,15 @@
-init:
-  pip install tox
-
-test:
-  tox
+language: generic
+dist: focal
+before_install:
+ - pip install -U pip
+install:
+ # failing with the latest (No Module seed.via_app_data)
+ - pip install virtualenv==20.0.23
+ - pip install -U tox
+ - pip install -U codecov
+script:
+  - tox
+  # for codecov
+  - coverage xml
+after_success:
+  - codecov # submit coverage
