@@ -27,7 +27,7 @@ $ git describe --contains <commit_sha>
 ### Github Linus's `linux.git`
 This repo is kept up-to-date and we can use the Github API to query commits and tags without cloning the repo and maintaining it. This module uses this approach and does a simple binary search based on commit and tag date.
 
-# Usage
+# Usage (clone)
 ## Prerequisites
 * Github API token with proper permissions
 * `pipenv` installed
@@ -46,3 +46,19 @@ $ export GITHUB_API_TOKEN=<token>
 $ pipenv install
 $ pipenv run lk-get-tag -c <commit_sha>
 ```
+# Usage (pip)
+This package can also be directly installed using `pip` and then can be run, see below steps
+
+## Prerequisites
+* Github API token with proper permissions
+* `pip` installed (preferably the latest version)
+* Tested on Ubuntu Distribution, but should work in others.
+
+## Running
+* Create and Install the package from `pypi`
+    - `pip install linux-kernel-compat-helper`
+
+* Run the application, below command will display the usage.
+    - `lk-get-tag -h`
+
+    Note: `pip` installation path `bin` directory should be in the `$PATH` for this command to work.
